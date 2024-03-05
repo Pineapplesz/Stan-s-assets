@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    min-height: 5rem;
+    padding: .3125rem;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 12px 0px rgba(24, 9, 96, 0.1);
+    @media (max-width: 79em){
+        gap: .625rem;
+    }
+    &__logo {
+    }
+    &__menu {
+        align-items: center;
+        display: flex;
+        gap: clamp(1.875rem , 10vw, 9.0625rem);
+        @media (max-width: 79em){
+            gap: clamp(1.875rem , 2vw, 7.1875rem);
+        }
+    }
+}
+.menu {
+    &__icon {}
+    &__body {
+        align-items: center;
+        justify-content: center;
+    }
+    &__list {
+        display: flex;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+    &__item {
+    }
+    &__link {
+        font-weight: 700;
+    }
+    &__link:hover {
+        color: #d8d8d8;
+    }
+}
+.icon-menu {
+}
+
+.burger-navigation {
+    display: none;
+}

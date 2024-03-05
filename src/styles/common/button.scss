@@ -1,0 +1,51 @@
+.button-white {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 1rem;
+    border: 0.125rem solid $witeColor;
+    color: $witeColor;
+    padding: .0938rem 1.5rem;
+    background-color: inherit;
+    line-height: 225%;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    min-width: 10rem;
+    max-width: 10rem;
+}
+.button-white:hover{
+    background-color: #06B25F;
+}
+
+.green {
+    color: #06B25F;
+    border: 0.125rem solid #06B25F;
+}
+
+.button-lightGreen {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 1rem;
+    border: 0.125rem solid;
+    color: $witeColor;
+    padding: .0938rem 1.5rem;
+    background-color: #06B25F;
+    line-height: 225%;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    min-width: 10rem;
+    max-width: 10rem;
+}
+
+.button-lightGreen:hover{
+    background-color: #27AE60;
+}

@@ -1,0 +1,130 @@
+//&display=swap - додати при підключенні через плагін
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,700&display=swap);
+@font-face {
+    font-family: 'Harabara';
+    src: url('/src/assets/fonts/harabara-webfont.woff2') format('woff2'),
+         url('/src/assets/fonts/harabara-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// main font ===============================================================
+$fontFamily: "Montserrat";
+$fontSize: 16rem; // 14(px) - розмір шрифту за замовчуванням з макету
+
+// Основні кольори
+$mainColor: #242424; // Колір шрифту за замовчуванням
+$witeColor: #FFFFFF;
+$mediumBlueColor: #0D6EB7;
+$darkBlueColor: #194484;
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1600;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1364;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: 1394;
+
+@import "./styles/common/reset.scss";
+
+// Брейк-поїнти
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileSmall: em(479.98); // Телефони S
+
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;
+
+// Стилі тега BODY ===================================================================================
+
+body {
+	color: $witeColor;
+	background-color: #242424;
+	// Скролл заблоковано
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	// Сайт завантажений
+	.loaded & {
+	}
+}
+
+// Оболонка wrapper =================================================================================
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+ }
+ 
+ [class*="__container"]{
+	max-width: 1170px; 
+	margin: 0 auto;
+ }
+ [class*="__container-big"]{
+	max-width: 1364px; 
+	margin: 0 auto;
+ }
+ main{
+	flex: 1 1 auto;
+ }
+
+// Обмежуючий контейнер ===============================================================================
+// @if ($responsiveType==1) {
+// 	// Чуйна
+// 	[class*="__container-big"] {
+// 		@if ($maxWidthContainer>0) {
+// 			max-width: rem($containerWidth);
+// 			margin: 0 auto;
+// 		}
+// 		@if ($containerPadding>0) {
+// 			@if ($maxWidthContainer>0) {
+// 				padding: 0 rem(math.div($containerPadding, 2));
+// 			} @else {
+// 				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+// 				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+// 			}
+// 		}
+// 	}
+// } @else {
+// 	// Брейк-поїнтами
+// 	[class*="__container"] {
+// 		margin: 0 auto;
+// 		@if ($maxWidthContainer>0) {
+// 			max-width: rem($containerWidth);
+// 		} @else {
+// 			@if ($containerPadding>0) {
+// 				padding: 0 rem(math.div($containerPadding, 2));
+// 			}
+// 		}
+// 		@media (max-width: $pc) {
+// 			max-width: rem(970);
+// 		}
+// 		@media (max-width: $tablet) {
+// 			max-width: rem(750);
+// 		}
+// 		@media (max-width: $mobile) {
+// 			max-width: none;
+// 			@if ($containerPadding>0 and $maxWidthContainer>0) {
+// 				padding: 0 rem(math.div($containerPadding, 2));
+// 			}
+// 		}
+// 	}
+// }
+
+@import "./styles/header.scss";
+@import "./styles/common/button.scss";
+@import "./styles/common/burger-menu.scss";
+@import "./styles/home.scss";
