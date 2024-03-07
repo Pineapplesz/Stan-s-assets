@@ -49,7 +49,7 @@ $responsiveType: 1;
 
 body {
 	color: $witeColor;
-	background-color: #242424;
+	background-color: #ffffff;
 	// Скролл заблоковано
 	.lock & {
 		overflow: hidden;
@@ -125,6 +125,7 @@ body {
 // }
 
 @import "./styles/header.scss";
+@import "./styles/footer.scss";
 @import "./styles/common/button.scss";
 @import "./styles/common/burger-menu.scss";
 @import "./styles/home.scss";
