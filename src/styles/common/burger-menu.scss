@@ -1,6 +1,8 @@
 @media (max-width: 67.1875em){
 .burger-navigation{
     display: block;
+    z-index: 101;
+    
 }
 .header {
     width: 100%;
@@ -20,6 +22,7 @@
     align-items: center;    
     justify-content: center;  
     flex-direction: column;
+    z-index: 100;
 }
 .menu__list{
     align-items: center;    

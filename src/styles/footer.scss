@@ -1,12 +1,5 @@
 .footer {
     position: relative;
-    padding-top: 11.25rem; 
-    padding-bottom: clamp(1.875rem ,10vw ,  3.125rem);
-    display: grid;
-    grid-template-columns: 1fr 1fr auto 1fr auto;
-    align-items: stretch;
-    justify-items: center;
-    gap: clamp(.625rem , 10vw, 1.5rem);
     &::after{
         content: "";
         position: absolute;
@@ -35,6 +28,16 @@
             display: none;
         }
     }
+}
+.footer__container-big{
+    position: relative;
+    padding-top: 11.25rem; 
+    padding-bottom: clamp(1.875rem ,10vw ,  3.125rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr auto;
+    align-items: stretch;
+    justify-items: center;
+    gap: clamp(.625rem , 10vw, 1.5rem);
     @media (max-width: 68.75em) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
