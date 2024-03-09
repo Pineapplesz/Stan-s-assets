@@ -7,5 +7,11 @@ document.querySelector('#header-container').innerHTML = headerHtml;
 import footerHtml from './template/Footer.js';
 document.querySelector('#footer-container').innerHTML = footerHtml;
 
+//socials
+import socialsHtml from './template/Socials.js';
+document.querySelector('#socials-container').innerHTML = socialsHtml;
+
 import('./scripts/burger-menu.js').then(() => {
 });
+
+import './scripts/swiper.js';

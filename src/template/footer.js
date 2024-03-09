@@ -15,13 +15,13 @@ const footerHtml = `
                 <a href="" class="footer-socials__item"><img src="${facebook}"
                     alt="facebook"></a>
                 <a href="" class="footer-socials__item"><img src="${linkedin}"
-                    alt="logo"></a>
+                    alt="linkedin"></a>
                 <a href="" class="footer-socials__item"><img src="${telephone}"
-                    alt="logo"></a>
+                    alt="telephone"></a>
                 <a href="" class="footer-socials__item"><img src="${skype}"
-                    alt="logo"></a>
+                    alt="skype"></a>
                 <a href="" class="footer-socials__item"><img src="${github}"
-                    alt="logo"></a>
+                    alt="github"></a>
             </div>
         </div>
         <div class="footer-services">
@@ -44,12 +44,12 @@ const footerHtml = `
             </div>
         </div>
         <div class="footer-products">
-            <a href="" class="footer-products__text">products </a>
-            <a href="" class="footer-products__text">Portfolio </a>
-            <a href="" class="footer-products__text">Blog </a>
+            <a href="" class="footer-products__text">products</a>
+            <a href="" class="footer-products__text">Portfolio</a>
+            <a href="" class="footer-products__text">Blog</a>
         </div>
         <div class="footer-about">
-            <a href="" class="footer-about__text">About us </a>
+            <a href="" class="footer-about__text">About us</a>
             <div class="footer-about__items">
                 <a href='' class="footer-about__item">Contacts</a>
                 <a href='' class="footer-about__item">Team</a>

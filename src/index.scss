@@ -35,10 +35,10 @@ $containerWidth: 1394;
 @import "./styles/common/reset.scss";
 
 // Брейк-поїнти
-$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
-$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
-$mobile: em(767.98); // Телефони L
-$mobileSmall: em(479.98); // Телефони S
+$pc: 87.125em; // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: 61.9988em; // Планшети, деякі телефони в горизонтальному положенні
+$mobile: 47.9988em; // Телефони L
+$mobileSmall: 29.9988em; // Телефони S
 
 // Тип адаптива:
 // 1 = чуйність (у контейнера немає брейкпоінтів),
@@ -127,5 +127,8 @@ body {
 @import "./styles/header.scss";
 @import "./styles/home.scss";
 @import "./styles/footer.scss";
+@import "./styles/socials.scss";
+
 @import "./styles/common/button.scss";
 @import "./styles/common/burger-menu.scss";
+@import "./styles/common/swiper.scss";

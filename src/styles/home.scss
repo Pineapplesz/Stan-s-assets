@@ -3,21 +3,24 @@
     display: flex;
     padding-left: 25px;
     padding-right: 25px;
-    &::after{
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url("/src/assets/img/home/focus/homeBG.png") no-repeat;
-        background-size: cover; 
-        z-index: -2;
+    @media (max-width: 1075px) {
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("/src/assets/img/home/focus/homeBG.png") no-repeat;
+            background-size: cover; 
+        }
     }
+    
     &__content {
         max-width: 34.375rem;
         display: grid;
         gap: .9375rem;
+        z-index: 10;
     }
     @media (max-width: 68.75rem) {
         justify-content: center;
@@ -36,7 +39,7 @@
         display: flex;
         flex-direction: column;
         gap: .9375rem;
-        @media (max-width: 67.3125rem) {
+        @media (max-width: 67.1875em) {
             flex-direction: column-reverse;
             padding-top: 3.75rem;
         }
@@ -44,9 +47,9 @@
     &__text {
         font-weight: 400;
         line-height: 162%;
-        @media (max-width: 67.3125rem) {
+        @media (max-width: 67.1875em) {
             color: $mainColor;
-            padding-top: clamp(150px , 5vw, 250px);
+            padding-top: clamp(125px , 10vw, 250px);
         }
     }
     &__navigation {
@@ -55,9 +58,56 @@
         @media (max-width: 68.75rem) {
             justify-content: center;
         }
-        @media (max-width: 31.25rem) {
+        @media (max-width: 21.875em) {
             flex-direction: column;
         }
     }
     &__swiper {}
+}
+
+
+.swiper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    @media (max-width: 1075px) {
+        display: none;
+    }
+}
+.swiper-wrapper {
+   
+}
+.swiper-slide {
+    
+}
+.swiper-slide-1 {
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/src/assets/img/home/focus/homeBG.png") no-repeat;
+        background-size: cover; 
+    }
+}
+.swiper-slide-2 {
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/src/assets/img/home/focus/homeBG2.png") no-repeat;
+        background-size: cover; 
+    }
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
 }
