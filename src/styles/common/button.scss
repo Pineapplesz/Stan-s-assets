@@ -14,8 +14,12 @@
     font-weight: 700;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
-    min-width: 10rem;
-    max-width: 10rem;
+    white-space: nowrap;
+    width: 9.9375rem;
+    @media (max-width: 68.75em) {
+        color: #b3b3b3;
+        border-color: #b3b3b3;;
+    }
 }
 .button-white:hover{
     background-color: #06B25F;
@@ -42,8 +46,7 @@
     font-weight: 700;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
-    min-width: 10rem;
-    max-width: 10rem;
+    white-space: nowrap;
 }
 
 .button-lightGreen:hover{
