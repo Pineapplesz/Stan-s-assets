@@ -13,9 +13,13 @@ document.querySelector('#footer-container').innerHTML = footerHtml;
 import socialsHtml from './template/Socials.js';
 document.querySelector('#socials-container').innerHTML = socialsHtml;
 
-//Focus Section
-import technologiesSectionHtml from './template/FocusSection.js';
+//technologies Section
+import technologiesSectionHtml from './template/TechnologiesSection.js';
 document.querySelector('#technologiesSection-container').innerHTML = technologiesSectionHtml;
+
+import LookingSectionHtml from './template/LookingSection.js';
+document.querySelector('#lookingSection-container').innerHTML = LookingSectionHtml;
+
 
 import('./scripts/burger-menu.js').then(() => {
 });

@@ -23,6 +23,13 @@
 }
 .button-white:hover{
     background-color: #06B25F;
+    color: $witeColor;
+}
+
+.button-white-white{
+    background-color: $witeColor;
+    color: #06B25F;
+    border: 0.125rem solid #06B25F;
 }
 
 .green {
