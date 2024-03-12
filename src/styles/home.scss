@@ -399,3 +399,114 @@
         font-size: 1.5rem;
     }
 }
+
+//----------------------------------------------achievements-----------------------------------------------------------
+
+.achievements {
+    margin-top: 6.25rem;
+    &__container-big{
+        display: grid;
+        gap: 6.25rem;
+    }
+    &__title {
+        font-family: 'Harabara';
+        font-weight: 700;
+        color: $darkBlueColor;
+        font-size: 2.25rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__content {
+    }
+}
+.achievements-content {
+    display: grid;
+    gap: .9375rem;
+    grid-template-columns: repeat(auto-fill, 20rem);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(auto-fill, clamp(18rem, 5vw,20rem));
+    }
+    &__item {
+    }
+}
+.achievements-content-item {
+    height: 25rem;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem 1.25rem 3.75rem 1.25rem;
+    &__image {
+    }
+    &__text {
+        color: $mainColor;
+        line-height: 162%;
+    }
+    &__text span{
+        color: $mediumBlueColor;
+        font-weight: 700;
+    }
+}
+.achievements-content-item-1 {
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        content: '';
+        background: url('/src/assets/img/home/achievements/card1.svg');
+        background-size: cover;
+        z-index: -5;
+    }
+}
+.achievements-content-item-2 {
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url('/src/assets/img/home/achievements/card2.svg');
+        background-size: cover;
+        z-index: -5;
+    }
+}
+.achievements-content-item-3 {
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        width: 75%;
+        height: 55%;
+        content: '';
+        background: url('/src/assets/img/home/achievements/card3.svg');
+        background-size: cover;
+        z-index: -5;
+    }
+}
+.achievements-content-item-4 {
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 45%;
+        content: '';
+        background: url('/src/assets/img/home/achievements/card4.svg');
+        background-size: cover;
+        z-index: -5;
+    }
+}
