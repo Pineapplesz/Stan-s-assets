@@ -3,8 +3,7 @@
 .focus{
     padding-top: clamp(3.125rem, 10vh, 9.375rem);
     display: flex;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0rem 1.5625rem;
     @media (max-width: 68.75em) {
         justify-content: center;
         align-items: center;
@@ -18,10 +17,8 @@
             height: 70%;
             background: url("/src/assets/img/home/focus/homeBG.png") no-repeat;
             background-size: cover; 
-
         }
     }
-    
     &__content {
         max-width: 34.375rem;
         display: grid;
@@ -42,7 +39,7 @@
         gap: .9375rem;
         @media (max-width: 68.75em) {
             flex-direction: column-reverse;
-            padding-top: 100px;
+            padding-top: 6.25rem;
         }
     }
     &__text {
@@ -226,13 +223,14 @@
 
 .technologies-raiting__content {
     display: flex;
-    gap: .625rem;
+    gap: 1.25rem;
     justify-content: center;
     align-items: center;
     &__number {
         color: $mainColor;
         font-size: 1.125rem;
         font-weight: 600;
+        width: 10px;
     }
 }
 
@@ -247,7 +245,7 @@
 
 .rating > input { display: none; } 
 .rating > label:before { 
-  margin: 5px;
+  margin: .3125rem;
   font-size: 1.25em;
   font-family: FontAwesome;
   display: inline-block;
@@ -510,3 +508,200 @@
         z-index: -5;
     }
 }
+
+//----------------------------------------------partners-----------------------------------------------------------
+
+.partners {
+    position: relative;
+    padding-top: 9.375rem;
+    padding-bottom: 9.375rem;
+    gap: 5rem;
+    &__container-big {
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: url('/src/assets/img/home/partners/partners-bg.png');
+            background-size: cover;
+            z-index: -5;
+        }
+    }
+    &__title {
+        font-family: 'Harabara';
+        font-weight: 700;
+        color: $darkBlueColor;
+        font-size: 2.25rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 20.125rem));
+        grid-auto-rows: 10rem;
+        row-gap: 2.5rem;
+        column-gap: 1.5rem;
+        justify-content: center;
+      @media (max-width: $tablet) {
+        padding: 0rem .9375rem;
+      }
+    }
+}
+.partners-content {
+    position: relative;
+    &__item {
+        display: flex;
+        border-radius: 1rem;
+        box-shadow: 0px 3px 16px 4px rgba(29, 51, 107, 0.1);
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+//----------------------------------------------contacts-----------------------------------------------------------
+
+.contacts {
+    padding: 6.25rem .625rem;
+    &__container {
+        display: grid;
+        gap: 1.875rem;
+        text-align: center;
+    }
+    &__title {
+        font-family: 'Harabara';
+        font-weight: 700;
+        color: $darkBlueColor;
+        font-size: 2.25rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 5rem;
+        padding-bottom: 1.5625rem;
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $mainColor;
+
+    }
+    &__subtext {
+        color: $mainColor;
+    }
+    &__content {}
+}
+.contacts-content {
+    margin-top: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3.125rem;
+    }
+    &__info {
+    }
+    &__form {
+    }
+}
+.contacts-content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    &__item {}
+}
+.contacts-content-info-item {
+   display: flex;
+   gap: 1.25rem;
+   height: 30px;
+    &__icon {}
+    &__text {
+        color: $mainColor;
+        text-align: left;
+    }
+    &__item {}
+}
+
+.contacts-content-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem 2.5rem 4.375rem 2.5rem;
+    box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: .375rem;
+    max-height: 25rem;
+    max-width: 26.25rem;
+    width: 26.25rem;
+    font-family: 'Open Sans';
+    background-color: $witeColor;
+    gap: 20px;
+    @media (max-width: 31.25em) {
+        width: 18.75rem;
+    }
+    &::before{
+        position: absolute;
+        bottom: -65%;
+        left: -120px;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url("/src/assets/img/home/contacts/form/messageBg.svg") no-repeat;
+        z-index: -1;
+    }
+    &::after{
+        position: absolute;
+        top: -50px;
+        left: -100px;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url("/src/assets/img/home/contacts/form/chatBg.svg") no-repeat;
+        z-index: -1;
+    }
+    &__input {
+        color: #a9a9a9;
+        border: 1px solid rgb(215, 215, 215);
+        border-radius: .25rem;
+        height: 1.25rem;
+        padding: 1.25rem;
+    }
+    &__textarea-label {
+        
+    }
+    &__textarea {
+        font-size: 1rem;
+        color: #a9a9a9;
+        border: 1px solid rgb(215, 215, 215);
+        max-width: 21.1875rem;
+        min-width: 21.1875rem;
+        max-height: 5rem;
+        min-height: 5rem;
+        padding: 1.25rem;
+    }
+    &__button {
+        margin-top: .625rem;
+        background-color: #2DA531;
+        text-transform: uppercase;
+        padding: .9375rem 2.5rem;
+        border-radius: .375rem;
+        cursor: pointer;
+        &:hover{
+            background-color: #4bc24f;
+        }
+    }
+}
+
+.contacts-content-form-inner{
+        position: absolute;
+        top: -50px;
+        left: 88%;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url("/src/assets/img/home/contacts/form/telephoneBg.svg") no-repeat;
+        z-index: -1;
+    }
